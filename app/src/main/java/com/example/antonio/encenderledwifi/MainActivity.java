@@ -3,22 +3,49 @@ package com.example.antonio.encenderledwifi;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements View.OnClickListener {
 
     ActionBar ab;
+    private Button btnSignIn;
+    private Button btnSignUp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        inicializarcomponentes();
         actionBar();
 
+    }
+
+    private void inicializarcomponentes() {
+        btnSignIn = (Button) findViewById(R.id.btnSingIn);
+        btnSignUp = (Button) findViewById(R.id.btnSingUp);
+
+        btnSignIn.setOnClickListener(this);
+        btnSignUp.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        Intent i = null;
+        switch (v.getId()){
+            case R.id.btnSingIn:
+                i = new Intent(this, SignInActivity.class);
+                break;
+            case R.id.btnSingUp:
+                i = new Intent(this, SignUpActivity.class);
+                break;
+        }
+        startActivity(i);
     }
 
     private void actionBar() {
@@ -57,5 +84,6 @@ public class MainActivity extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
+
     //</editor-fold>
 }
