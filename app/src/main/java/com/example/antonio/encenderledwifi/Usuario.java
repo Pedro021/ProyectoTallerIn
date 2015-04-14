@@ -13,7 +13,7 @@ public class Usuario {
     public static final String ID = "_id";
     public static final String NOMBRE = "nombre";
     public static final String EMAIL = "email";
-    public static final String CONTRASEÑA = "contraseña";
+    public static final String CONTRASENA = "contrasena";
 
     //<editor-fold desc="ATRIBUTOS DE LA CLASE">
     @DatabaseField(generatedId = true, columnName = ID)
@@ -22,8 +22,8 @@ public class Usuario {
     private String email;
     @DatabaseField(columnName = NOMBRE)
     private String nombre;
-    @DatabaseField(columnName = CONTRASEÑA)
-    private String contraseña;
+    @DatabaseField(columnName = CONTRASENA)
+    private String contrasena;
     //</editor-fold>
 
     //<editor-fold desc="GETTER">
@@ -35,8 +35,8 @@ public class Usuario {
         return nombre;
     }
 
-    public String getContraseña() {
-        return contraseña;
+    public String getContrasena() {
+        return contrasena;
     }
     //</editor-fold>
 
@@ -49,8 +49,8 @@ public class Usuario {
         this.nombre = nombre;
     }
 
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
     }
     //</editor-fold>
 }
