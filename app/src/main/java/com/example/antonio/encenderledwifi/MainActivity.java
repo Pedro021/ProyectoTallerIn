@@ -48,6 +48,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         startActivity(i);
     }
 
+    //TODO: cambiar action bar de actividad
     private void actionBar() {
         ab = getActionBar();                        //Se crea la Action Bar
         ab.setDisplayShowHomeEnabled(true);         //Se muestra el icono de la App
