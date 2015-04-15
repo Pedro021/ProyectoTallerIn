@@ -1,5 +1,6 @@
 package com.example.antonio.encenderledwifi;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
 import android.preference.SwitchPreference;
@@ -17,6 +18,7 @@ public class Preference extends PreferenceFragment {
         addPreferencesFromResource(R.xml.preference);
 
         final SwitchPreference swGral;
+
         swGral = (SwitchPreference) findPreference("swGral");
         swGral.setOnPreferenceChangeListener(new android.preference.Preference.OnPreferenceChangeListener() {
             @Override
@@ -24,19 +26,39 @@ public class Preference extends PreferenceFragment {
 
                 if(!swGral.isChecked())
                 {
-
-                    //getActivity().startService(new Intent(getActivity(),TimbreService.class));
                     Log.d("TAG", "Arranca Servicio");
-
+                    //getActivity().startService(new Intent(getActivity(), Servicio.class));
                 }
                 else
                 {
-                    //getActivity().stopService(new Intent(getActivity(),TimbreService.class));
-                    Log.d("TAG","Detiene Servicio");
+                    Log.d("TAG", "Detiene Servicio");
+                    //getActivity().stopService(new Intent(getActivity(), Servicio.class));
+                }
+
+                return true;
+            }
+        });
+
+        final SwitchPreference swActividadCliente;
+
+        swActividadCliente = (SwitchPreference) findPreference("swActividadCliente");
+        swActividadCliente.setOnPreferenceChangeListener(new android.preference.Preference.OnPreferenceChangeListener() {
+            @Override
+            public boolean onPreferenceChange(android.preference.Preference preference, Object o) {
+
+                if(!swGral.isChecked())
+                {
+                    Log.d("TAG", "Arranca Actividad Cliente");
+                    getActivity().startActivity(new Intent(getActivity(), ActividadCliente.class));
+                }
+                else
+                {
+
                 }
 
                 return true;
             }
         });
     }
+
 }
