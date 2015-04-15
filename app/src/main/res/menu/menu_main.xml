@@ -9,11 +9,4 @@
         android:orderInCategory="100"
         app:showAsAction="never" />
 
-    <item
-        android:id="@+id/Connect"
-        android:icon="@mipmap/ic_action_network_wifi"
-        android:title="Enlazar con Arduino"
-        android:orderInCategory="1"
-        android:showAsAction="ifRoom|withText"/>
-
 </menu>

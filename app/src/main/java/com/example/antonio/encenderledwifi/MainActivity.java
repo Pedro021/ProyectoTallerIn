@@ -13,14 +13,15 @@ import android.widget.Button;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
-    ActionBar ab;
     private Button btnSignIn;
     private Button btnSignUp;
+    ActionBar ab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         inicializarcomponentes();
         actionBar();
 
@@ -48,13 +49,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
         startActivity(i);
     }
 
-    //TODO: cambiar action bar de actividad
     private void actionBar() {
-        ab = getActionBar();                        //Se crea la Action Bar
-        ab.setDisplayShowHomeEnabled(true);         //Se muestra el icono de la App
-        ab.setDisplayHomeAsUpEnabled(true);         //Se muestra el boton de retroceso
-        ab.setHomeButtonEnabled(true);              //Se habilita el boton de retroceso
-        ab.setDisplayShowTitleEnabled(false);       //Se oculta el titulo de la App
+        ab = getActionBar();
+        ab.setDisplayShowTitleEnabled(false);
         ab.show();
     }
 
@@ -78,9 +75,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 FragmentManager fragmentManager = getFragmentManager();
                 DialogoInformacion dialogo = new DialogoInformacion();
                 dialogo.show(fragmentManager, "TAG");
-                break;
-            case R.id.Connect:
-                //TODO: Hacer clase de conexion ethernet
                 break;
         }
         return super.onOptionsItemSelected(item);

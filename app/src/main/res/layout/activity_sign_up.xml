@@ -22,7 +22,8 @@
             android:padding="10dp"
             android:hint="Email"
             android:textColorHint="#bbbbbb"
-            android:drawableLeft="@mipmap/email"/>
+            android:drawableLeft="@mipmap/email"
+            android:inputType="textEmailAddress" />
         <EditText
             android:id="@+id/etUserName2"
             android:layout_width="match_parent"
@@ -32,7 +33,8 @@
             android:padding="10dp"
             android:hint="User Name"
             android:textColorHint="#bbbbbb"
-            android:drawableLeft="@mipmap/user"/>
+            android:drawableLeft="@mipmap/user"
+            android:inputType="text" />
         <EditText
             android:id="@+id/etPass2"
             android:layout_width="match_parent"
@@ -43,7 +45,8 @@
             android:hint="Password"
             android:textColorHint="#bbbbbb"
             android:password="true"
-            android:drawableLeft="@mipmap/password"/>
+            android:drawableLeft="@mipmap/password"
+            android:inputType="textPassword" />
         <Button
             android:id="@+id/btnSingUp2"
             android:layout_width="match_parent"

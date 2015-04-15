@@ -24,6 +24,10 @@
             android:name=".SignUpActivity"
             android:label="@string/title_activity_sign_up" >
         </activity>
+        <activity
+            android:name=".PreferencesActivity"
+            android:label="@string/title_activity_preferences" >
+        </activity>
     </application>
 
 </manifest>
