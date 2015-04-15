@@ -28,6 +28,8 @@ public class ActividadCliente extends Activity {
         tvServerMsg = (TextView) findViewById(R.id.tvServerMsg);
 
         ClienteAsyncTask clienteAST = new ClienteAsyncTask();
+
+        //TODO: Aqui vas a poner el IP del servidor, el puerto del servidor y el mensaje que le quieres enviar al servidor
         //Pasamos el IP del servidor, el puerto y el mensaje del cliente a la tarea Asicrona
         clienteAST.execute(new String[]{"IP del server, portDelServer", "Msg a enviar al server"});
     }
