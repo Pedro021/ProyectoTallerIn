@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="Configuraciones"
+    android:title="Configuraciones">
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="swGral"
+        android:title="ActivarServicio"/>
+
+    <CheckBoxPreference
+        android:key="chkActionBar"
+        android:title="Ver ActionBar"
+        android:defaultValue="false"
+        android:summary="Muestra la barra de estado, los botones Abrir Puerta, Abrir Configuraciones y Activar Servicio"/>
+
+    <PreferenceCategory
+        android:key="catLlamada"
+        android:title="Llamada">
+
+        <RingtonePreference
+            android:key="selTono"
+            android:title="Seleccionar Tono"
+            android:defaultValue="defaultRingtone"
+            android:ringtoneType="ringtone"/>
+
+        <SeekBarPreference
+            android:key="sldVolumen"
+            android:title="Volumen de Tono"
+            android:dialogMessage="Cambiar Volumen de Tono"
+            android:defaultValue="50"
+            android:max="100"/>
+
+        <CheckBoxPreference
+            android:key="actVibrar"
+            android:title="Vibracion"
+            android:defaultValue="false"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="catSeguridad"
+        android:title="Seguridad">
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

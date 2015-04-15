@@ -73,7 +73,7 @@ public class SignInActivity extends OrmLiteBaseActivity<DbHelper> implements Vie
                     nombre = useer.getNombre().toString();
                     Toast.makeText(this, "Bienvenido " + nombre, Toast.LENGTH_SHORT).show();
 
-                    Intent i = new Intent(this, PreferencesActivity.class);
+                    Intent i = new Intent(this, Configuracion.class);
                     //i.putExtra("u", nombre);
                     startActivity(i);
                 }
